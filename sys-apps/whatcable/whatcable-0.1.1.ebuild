@@ -42,7 +42,9 @@ src_prepare() {
 	cmake_src_prepare
 
 	# Upstream forgot to update the project version for the 0.1.1 tag.
-	sed -e "s/VERSION 0\.1\.0/VERSION ${PV}/" -i CMakeLists.txt || die
+	sed -e "s/VERSION 0\.1\.0/VERSION ${PV}/" \
+		-e "s/QStringLiteral(\"0\.1\.0\")/QStringLiteral(\"${PV}\")/" \
+		-i CMakeLists.txt src/cli/main.cpp || die
 
 	# Prevent KDECMakeSettings from trying to query a nonexistent Git checkout.
 	mkdir po || die
