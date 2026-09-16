@@ -1,0 +1,23 @@
+[Unit]
+Description=Prometheus exporter for NGINX and NGINX Plus
+Documentation=https://github.com/nginx/nginx-prometheus-exporter
+After=network-online.target nginx.service
+Wants=network-online.target
+
+[Service]
+User=nobody
+Group=nobody
+Environment="ARGS=--nginx.scrape-uri=http://127.0.0.1:8080/stub_status"
+ExecStart=/usr/bin/nginx-prometheus-exporter $ARGS
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

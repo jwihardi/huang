@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+description="Prometheus exporter for NGINX and NGINX Plus"
+command="/usr/bin/nginx-prometheus-exporter"
+command_args="${command_args:---nginx.scrape-uri=http://127.0.0.1:8080/stub_status}"
+command_background=true
+command_user="nobody:nobody"
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+	after net
+	use nginx
+}
