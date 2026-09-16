@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="plasma">Build and install the Plasma 6 widget</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Zetaphor/whatcable-linux</remote-id>
+	</upstream>
+</pkgmetadata>
