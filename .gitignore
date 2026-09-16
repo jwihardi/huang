@@ -1,0 +1,10 @@
+*.log
+*.swp
+*~
+.idea/
+.vscode/
+/distfiles/
+/metadata/md5-cache/
+/packages/
+/tags
+
