@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>
+		This plug-in starts XSane as a separate process and imports completed
+		scans into GIMP 3 without requiring XSane's legacy GIMP integration.
+	</longdescription>
+</pkgmetadata>
