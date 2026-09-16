@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="http">Enable downloading IP lists over HTTP</flag>
+		<flag name="prometheus">Install the Prometheus metrics exporter</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">FoobarOy/foomuuri</remote-id>
+	</upstream>
+</pkgmetadata>

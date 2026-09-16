@@ -1,0 +1,39 @@
+#!/sbin/openrc-run
+
+description="Foomuuri multizone nftables firewall"
+
+command="/usr/sbin/foomuuri"
+extra_started_commands="check reload"
+description_check="Check the Foomuuri configuration"
+description_reload="Reload the Foomuuri ruleset"
+
+depend() {
+	need localmount
+	before net
+	use logger
+}
+
+check() {
+	ebegin "Checking Foomuuri configuration"
+	"${command}" check
+	eend $?
+}
+
+start() {
+	checkpath --directory --mode 0755 /run/foomuuri
+	ebegin "Starting Foomuuri"
+	"${command}" --quiet --syslog start
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading Foomuuri"
+	"${command}" --quiet --syslog reload
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Foomuuri"
+	"${command}" --quiet stop
+	eend $?
+}
