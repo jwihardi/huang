@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>
+		Glaze is a high-performance C++23 library for serialization,
+		reflection, and RPC with support for JSON and other formats.
+	</longdescription>
+	<use>
+		<flag name="examples">Build examples without installing them</flag>
+		<flag name="fuzzing">Build fuzzers without installing them</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://github.com/stephenberry/glaze/issues</bugs-to>
+		<changelog>https://github.com/stephenberry/glaze/releases</changelog>
+		<doc>https://stephenberry.github.io/glaze/</doc>
+		<remote-id type="github">stephenberry/glaze</remote-id>
+	</upstream>
+</pkgmetadata>
