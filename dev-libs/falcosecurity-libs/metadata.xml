@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		Falcosecurity libraries provide libscap for capturing system call events
+		and libsinsp for enriching and inspecting them. They are used by tools
+		such as Falco, Sysdig, and Stratoshark.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">falcosecurity/libs</remote-id>
+	</upstream>
+</pkgmetadata>
