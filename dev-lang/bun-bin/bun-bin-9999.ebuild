@@ -7,22 +7,51 @@ inherit shell-completion
 
 DESCRIPTION="Fast all-in-one JavaScript runtime, bundler, test runner, and package manager"
 HOMEPAGE="https://bun.com/ https://github.com/oven-sh/bun"
+
+if [[ ${PV} != *9999* ]]; then
+	MY_BASE_URI="https://github.com/oven-sh/bun/releases/download/bun-v${PV}"
+	SRC_URI="
+		amd64? (
+			cpu_flags_x86_avx2? (
+				elibc_glibc? ( ${MY_BASE_URI}/bun-linux-x64.zip -> ${P}-amd64.zip )
+				elibc_musl? ( ${MY_BASE_URI}/bun-linux-x64-musl.zip -> ${P}-amd64-musl.zip )
+			)
+			!cpu_flags_x86_avx2? (
+				elibc_glibc? ( ${MY_BASE_URI}/bun-linux-x64-baseline.zip -> ${P}-amd64-baseline.zip )
+				elibc_musl? ( ${MY_BASE_URI}/bun-linux-x64-musl-baseline.zip -> ${P}-amd64-musl-baseline.zip )
+			)
+		)
+		arm64? (
+			elibc_glibc? ( ${MY_BASE_URI}/bun-linux-aarch64.zip -> ${P}-arm64.zip )
+			elibc_musl? ( ${MY_BASE_URI}/bun-linux-aarch64-musl.zip -> ${P}-arm64-musl.zip )
+		)
+	"
+	KEYWORDS="~amd64 ~arm64"
+fi
+
 S="${WORKDIR}"
 
 LICENSE="MIT"
 SLOT="0"
 IUSE="cpu_flags_x86_avx2"
 
-BDEPEND="
-	app-arch/unzip
-	net-misc/curl
-"
-PROPERTIES="live"
-RESTRICT="mirror network-sandbox strip test"
+BDEPEND="app-arch/unzip"
+if [[ ${PV} == *9999* ]]; then
+	BDEPEND+=" net-misc/curl"
+	PROPERTIES="live"
+	RESTRICT="mirror network-sandbox strip test"
+else
+	RESTRICT="strip test"
+fi
 
 QA_PREBUILT="usr/bin/bun"
 
 src_unpack() {
+	if [[ ${PV} != *9999* ]]; then
+		default
+		return
+	fi
+
 	local suffix="" candidates=()
 
 	case ${ARCH} in
