@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>allarkvarkk@gmail.com</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">Wraient/curd</remote-id>
+	</upstream>
+	<use>
+		<flag name="rofi">Install runtime dependencies for the graphical selection menu</flag>
+	</use>
+</pkgmetadata>
