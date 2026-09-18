@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<use>
+		<flag name="system-names">Install as <c>sudo</c>, <c>visudo</c>, and <c>su</c> instead of names suffixed with <c>-rs</c></flag>
+		<flag name="su">Install the <c>su</c> implementation</flag>
+	</use>
+	<upstream>
+		<changelog>https://github.com/trifectatechfoundation/sudo-rs/blob/main/CHANGELOG.md</changelog>
+		<remote-id type="github">trifectatechfoundation/sudo-rs</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,16 @@
+## sudoers file for sudo-rs.
+##
+## This file MUST be edited with visudo-rs as root. Syntax errors may prevent
+## sudo-rs from running.
+
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin"
+
+root ALL=(ALL:ALL) ALL
+
+## Uncomment to allow members of group wheel to execute any command.
+# %wheel ALL=(ALL:ALL) ALL
+
+## Uncomment to allow members of group wheel to execute commands without a password.
+# %wheel ALL=(ALL:ALL) NOPASSWD: ALL
+
+@includedir /etc/sudoers.d
