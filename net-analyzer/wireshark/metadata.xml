@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		Wireshark is a network protocol analyzer. Huang's version additionally
+		offers Stratoshark, a system call and log analyzer built from the same
+		upstream source tree, through the stratoshark USE flag.
+	</longdescription>
+	<use>
+		<flag name="stratoshark">Build the Stratoshark graphical and command-line analyzers and capture helpers</flag>
+	</use>
+	<upstream>
+		<changelog>https://www.wireshark.org/news/</changelog>
+		<remote-id type="gitlab">wireshark/wireshark</remote-id>
+		<remote-id type="cpe">cpe:/a:wireshark:wireshark</remote-id>
+	</upstream>
+</pkgmetadata>
