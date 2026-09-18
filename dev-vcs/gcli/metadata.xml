@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		GCLI provides a consistent command-line interface for working with
+		GitHub, GitLab, Gitea, Forgejo, and Bugzilla.
+	</longdescription>
+	<use>
+		<flag name="lowdown">Render Markdown using <pkg>app-text/lowdown</pkg></flag>
+	</use>
+	<upstream>
+		<changelog>https://github.com/herrhotzenplotz/gcli/blob/master/Changelog.md</changelog>
+		<remote-id type="github">herrhotzenplotz/gcli</remote-id>
+	</upstream>
+</pkgmetadata>
