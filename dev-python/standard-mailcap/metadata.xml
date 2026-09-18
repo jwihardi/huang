@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		Standard-mailcap preserves the mailcap module removed from the Python
+		standard library by PEP 594.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">youknowone/python-deadlib</remote-id>
+		<remote-id type="pypi">standard-mailcap</remote-id>
+	</upstream>
+</pkgmetadata>
