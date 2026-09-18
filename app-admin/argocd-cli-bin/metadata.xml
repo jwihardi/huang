@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		The Argo CD command-line interface manages applications, projects,
+		repositories, clusters, and account sessions through an Argo CD server.
+	</longdescription>
+	<upstream>
+		<changelog>https://github.com/argoproj/argo-cd/releases</changelog>
+		<remote-id type="github">argoproj/argo-cd</remote-id>
+	</upstream>
+</pkgmetadata>
