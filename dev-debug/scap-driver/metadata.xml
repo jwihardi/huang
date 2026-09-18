@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		The scap kernel module captures system calls for consumers of
+		falcosecurity-libs, including Falco, Sysdig, and Stratoshark.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">falcosecurity/libs</remote-id>
+	</upstream>
+</pkgmetadata>
