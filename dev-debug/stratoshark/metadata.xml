@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		Stratoshark is a graphical and command-line system call and log analyzer
+		built on Wireshark's mature dissection and filtering interfaces.
+	</longdescription>
+	<use>
+		<flag name="modules">Install the matching scap kernel module for local system-call capture</flag>
+	</use>
+	<upstream>
+		<changelog>https://stratoshark.org/docs/relnotes/</changelog>
+		<remote-id type="gitlab">wireshark/wireshark</remote-id>
+	</upstream>
+</pkgmetadata>
