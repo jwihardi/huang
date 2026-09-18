@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jwihardi@proton.me</email>
+		<name>jwihardi</name>
+	</maintainer>
+	<longdescription>
+		VisiData is an interactive terminal program for exploring, cleaning,
+		transforming, and visualizing tabular data from many formats.
+	</longdescription>
+	<upstream>
+		<changelog>https://github.com/saulpw/visidata/blob/stable/CHANGELOG.md</changelog>
+		<remote-id type="github">saulpw/visidata</remote-id>
+		<remote-id type="pypi">visidata</remote-id>
+	</upstream>
+</pkgmetadata>
