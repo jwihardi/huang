@@ -35,6 +35,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="cpu_flags_x86_avx2"
 
+RDEPEND="!dev-lang/bun"
 BDEPEND="app-arch/unzip"
 if [[ ${PV} == *9999* ]]; then
 	BDEPEND+=" net-misc/curl"
