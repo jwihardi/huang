@@ -38,7 +38,10 @@ PATCHES=( "${FILESDIR}/${PN}-0.2.8-tests.patch" )
 
 src_unpack() {
 	git-r3_src_unpack
+
+	pushd "${S}" >/dev/null || die
 	cargo_live_src_unpack
+	popd >/dev/null || die
 }
 
 src_prepare() {
